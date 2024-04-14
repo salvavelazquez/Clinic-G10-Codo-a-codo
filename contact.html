@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+    <title>Clinica - Home</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="./index.html">
+                    <img src="./img/logo.png" alt="logo">
+                </a>
+            </div>
+            <ul id="nav-links">
+                <li><a href="./contact.html" class="contact-link">Contacto</a></li>
+                <li><a href="#" class="create">Date de alta</a></li>
+                <li><a href="#" class="login">Inicia sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+
+		<h1 class="brand"><span>Clinica CaC</span></h1>
+
+
+		<div class="wrapper">
+
+			<!-- Informacion sede central -->
+			<div class="company-info">
+				<h3>Sede Central</h3>
+
+				<ul>
+					<li><i class="fa fa-road"></i> Av General Paz 10158</li>
+					<li><i class="fa fa-phone"></i> 0800-555-5555</li>
+					<li><i class="fa fa-envelope"></i> info@cacmedicina.com</li>
+				</ul>
+				
+				<img src="./img/contact-img.png" alt="">
+			</div>
+			<!-- fin Informacion sede central -->
+
+			<div class="contact">
+                <h3>Contactenos</h3>
+                
+                <!-- formulario de contacto -->
+				<form id="contact-form">
+
+					<p>
+						<label>Nombre</label>
+						<input type="text" name="name" id="name" required>
+					</p>
+					
+					<p>
+						<label>Apellido</label>
+						<input type="text" name="name" id="lastname" required>
+					</p>
+
+					<p>
+						<label>DNI</label>
+						<input type="text" name="company" id="company" required>
+					</p>
+
+					<p>
+						<label>E-mail Address</label>
+						<input type="email" name="email" id="email" required>
+					</p>
+
+					<p>
+						<label>Telefono</label>
+						<input type="number" name="phone" id="phone" required>
+					</p>
+
+					<p>
+						<label for="select-Option">Tipo de Consulta:</label>
+                        <select id="select-Option">
+							<option value=""></option>
+                            <option value="">Gestión de Reintegros</option>
+                            <option value="">Gestión de Autorizaciones</option>
+                            <option value="">Programa Discapacidad</option>
+                            <option value="">Plan Materno Infantil</option>
+                            <option value="">Gestión/Asesoramiento por Medicamentos</option>
+                            <option value="">Consulta por Prestadores Médicos</option>
+                            <option value="">Consulta por Cobertura de Plan</option>
+                            <option value="">Facturación y Pagos</option>
+                            <option value="">Otra Consulta o Gestión</option>
+                        </select>
+					</p>
+
+					
+					<p class="full">
+						<label>Su Consulta</label>
+						<textarea name="message" rows="5" id="message"></textarea>
+					</p>
+					
+					<div class="checkbox">
+						<input type="checkbox" name="tos" required>
+						<label>He leído y acepto la <a href="#">Política de Privacidad*</a></label>
+					</div>
+					
+					<p class="full">
+						<button type="submit">Submit</button>
+					</p>
+
+				</form>
+            <!--  fin formulario de contacto -->
+			</div>
+        <!--  fin del wrapper -->
+		</div>
+    <!--  fin del contenedor -->
+	</div>
+    </main>
+    <footer>
+        🧭 FOOTER
+    </footer>
+</body>
+
+</html>
