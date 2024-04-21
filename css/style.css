@@ -5,12 +5,18 @@
     font-style: normal;
     font-variation-settings: "wdth" 100;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
 
 body {
     margin: 0;
     padding: 0;
     background-color: rgb(243, 250, 250);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 html {
@@ -55,7 +61,6 @@ main {
 
 main>img {
     margin: 0 0 40px 44px;
-    /* border: 2px solid red; */
 }
 
 .login {
@@ -99,7 +104,6 @@ main>img {
     justify-content: space-between;
     width: 95%;
     margin-left: 4%;
-    /* padding: 60px 0 60px 0; */
     padding-bottom: 60px;
 }
 
@@ -153,7 +157,6 @@ section p {
     flex-direction: column;
     justify-content: center;
     width: 58%;
-    /* gap: 10px; */
 }
 
 .items {
@@ -203,7 +206,6 @@ article {
     margin: 60px auto;
     justify-content: space-around;
     align-items: center;
-    /* border: 1px solid salmon; */
 }
 
 article img {
@@ -222,24 +224,45 @@ article p {
 }
 
 footer {
-    padding: 60px 1px;
-    background: rgb(1, 177, 101);
-    border: 5px dashed #375171;
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+    padding: 0px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #dcdfea;
+    margin-top: auto;
+}
+
+.footer-text {
     text-align: center;
+    align-content: center;
+    font-size: 0.8em;
+    color: gray;
+}
+
+.footer-social-media-list {
+    align-items: center;
+    font-size: 2em;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: right;
+    padding: 0px 30px 0px 0px;
+}
+
+.footer-social-media-list li:hover {
+    transform: scale(1.3);
 }
 
 
-
 /* ---------------------- */
 /* Formulario de Contacto */
 /* -----------------------*/
-/* ---------------------- */
-/* Formulario de Contacto */
-/* -----------------------*/
-
 
 .container {
-    max-width: 1100px;
+    max-width: auto;
     margin: 60px auto;
 }
 
@@ -250,8 +273,8 @@ footer {
 
 .brand {
     text-align: center;
-    font-weight: 300;
     letter-spacing: 0.1em;
+    margin: 20px;
 }
 
 .brand span {
@@ -261,15 +284,17 @@ footer {
 
 .wrapper {
     box-shadow: 0 0 20px 0 rgba(57, 82, 163, 0.7);
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .wrapper>* {
-    padding: 1em;
+    padding: 2em;
 }
 
-/* ------------------- */
-/* COMPANY INFORMATION */
-/* ------------------- */
+/* ----------------------- */
+/* INFORMACION DE COMPANIA */
+/* ----------------------- */
 
 .company-info {
     width: 100%;
@@ -281,18 +306,24 @@ footer {
 }
 
 .company-info h3,
-.company-info ul {
-    text-align: center;
+.company-info ul,
+.brand {
+    text-align: left;
     margin: 0 0 1rem 0;
 }
 
 .company-info img {
-    display: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
-/* ------- */
-/* CONTACT */
-/* ------- */
+/* ------------ */
+/* DIV CONTACTO */
+/* ------------ */
 
 .contact {
     background: #dcdfea;
@@ -300,9 +331,9 @@ footer {
     border-bottom-right-radius: 4px;
 }
 
-/* ---- */
-/* FORM */
-/* ---- */
+/* ------------- */
+/* FORM CONTACTO */
+/* ------------- */
 
 .contact form {
     display: grid;
@@ -312,10 +343,6 @@ footer {
 
 .contact form label {
     display: block;
-}
-
-.contact form p {
-    margin: 0;
 }
 
 .contact select {
@@ -346,7 +373,8 @@ footer {
 .checkbox {
     display: flex;
     width: 100%;
-    padding: 0.5em;
+    padding: 0.8em;
+    gap: 10px;
     border: solid 1px #627EDC;
     border-radius: 4px;
     grid-column: 1 / 3;
@@ -354,7 +382,7 @@ footer {
 }
 
 .checkbox input {
-    max-width: 1em;
+    max-width: 1.3em;
     display: flex;
     align-items: center;
 }
@@ -374,47 +402,86 @@ footer {
     background: #3a669c;
     color: #ffffff;
     outline: 0;
-
 }
+
+
+/* Social Media Icons */
+.social-media-list {
+    display: flex;
+    position: relative;
+    font-size: 2em;
+    justify-content: left;
+    gap: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.social-media-list li:hover {
+    transform: scale(1.3);
+}
+
+.social-media-icon {
+    color: #375171;
+}
+
+.social-media-icon:hover {
+    color: #3a669c;
+}
+
+
 
 /* ------------- */
 /* MEDIA QUERIES */
 /* ------------- */
+@media only screen and (min-width:300px) and (max-width:700px) {
 
-@media only screen and (min-width: 700px) {
     .wrapper {
+        box-shadow: 0 0 20px 0 rgba(57, 82, 163, 0.7);
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr;
     }
 
     .wrapper>* {
-        padding: 2em;
-    }
-
-    .company-info {
-        border-radius: 4px 0 0 4px;
+        padding: 1em;
     }
 
     .company-info img {
-        display: block;
-        width: 100%;
-        height: auto;
-        position: absolute;
-        bottom: 0;
-        right: 0;
+        display: none;
     }
 
-    .contact {
-        border-radius: 0 4px 4px 0;
+    .social-media-list {
+        justify-content: center;
     }
 
     .company-info h3,
-    .company-info ul,
-    .brand {
-        text-align: left;
+    .company-info ul {
+        text-align: center;
+        margin: 0 0 1rem 0;
     }
-}
 
+    .brand {
+        text-align: center;
+        letter-spacing: 0.1em;
+        margin: 20px;
+    }
+
+    footer {
+        grid-template-columns: none;
+        justify-content: center;
+
+    }
+
+    .footer-text {
+        display: none;
+    }
+
+    .contact-link {
+        display: none;
+    }
+
+}
 
 /* ----------------- */
 /* Pantallas Grandes */
@@ -435,7 +502,7 @@ footer {
     .contact form button,
     .contact form input,
     .contact form textarea,
-    .contact form select{
+    .contact form select {
         width: 100%;
         padding: 0.8em;
         border: solid 1px #627EDC;
