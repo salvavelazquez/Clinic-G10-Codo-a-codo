@@ -3,26 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <title>Inicia sesión</title>
 </head>
 <body>
     <header>
-        <p>Idioma: Español | Contacto | Date de alta | Incia sesión </p>
+        <nav>
+            <div id="logo">
+                <a href="./index.html">
+                    <img src="./img/logo.png" alt="logo">
+                </a>
+            </div>
+            <ul id="nav-links">
+                <li><a href="./contact.html" class="contact-link">Contacto</a></li>
+                <li><a href="./register.html" class="create">Date de alta</a></li>
+                <li><a href="./login.html" class="login">Inicia sesión</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <img src="./img/logo.PNG" alt="logo">
         <section>
             <form action="./index.html">
-                <label for="nombre">Correo electrónico</label>
-                <input type="text" name="nombre" size="30" required="True">
+                <div>
+                    <label for="nombre">Correo electrónico</label>
+                    <input type="text" name="nombre" size="30" required="True">
+                </div>
 
-                <label for="contrasena">Contraseña</label>
-                <input type="text" name="contrasena" size="30" required="True">
-
-                <input type="submit" value="Iniciar sesión">
+                <div>
+                    <label for="contrasena">Contraseña</label>
+                    <input type="text" name="contrasena" size="30" required="True">
+                </div>
+                    
+                <div>
+                    <input type="submit" value="Iniciar sesión">
+                </div>
                 
             </form>
         </section>
     </main>
+    <footer>
+        <span class="footer-text">ASOCIACIÓN MUTUAL CLINICA CAC inscripta en el Registro Nacional de Entidades de
+            Medicina Prepaga (R.N.E.M.P.) bajo el número 1137. Superintendencia de Servicios de Salud - Órgano de
+            Control de Obras Sociales y Entidades de Medicina Prepaga - 0800-222-SALUD (72583) -
+            www.sssalud.gob.ar</span>
+            <ul class="footer-social-media-list">
+                <li><a href="https://www.youtube.com" target="" class="social-media-icon">
+                    <i class="fa fa-youtube-square" aria-hidden="true"></i></a>
+                </li>
+                
+                <li><a href="https://www.linkedin.com" target="" class="social-media-icon">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+                
+                <li><a href="https://twitter.com/" target="" class="social-media-icon">
+                    <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+                
+                <li><a href="https://www.instagram.com" target="" class="social-media-icon">
+                    <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                
+            </ul>
+        </footer>
 </body>
 </html>
