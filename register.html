@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,26 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <title>Registro</title>
 </head>
+
 <body>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script>
-      $( function() {
-        $( "#datepicker" ).datepicker();
-      } );
+        $(function () {
+            $("#datepicker").datepicker();
+        });
     </script>
-  
+
 
     <header>
-        <div id="logo">
-            <a href="./index.html">
-                <img class="logo" src="./img/logo1.png" alt="Header">
-            </a>
-        </div>
         <nav>
+            <div id="logo">
+                <a href="./index.html">
+                    <img class="logo" src="./img/logo1.png" alt="Header">
+                </a>
+            </div>
+
             <ul id="nav-links">
                 <li><a href="./contact.html" class="contact-link">Contacto</a></li>
                 <li><a href="./register.html" class="create">Date de alta</a></li>
@@ -34,89 +37,92 @@
     </header>
     <main>
         <div class="register-container">
-                
-                <h2>Por favor, complete los campos</h2>
-                
-                <form action="./login.html" class="form-register">
-                    
-                    <div>
-                        <label for="name">Nombre y apellido</label>
-                        <input type="text" name="name" id="name" size="30" required="True">
-                    </div>
-                        
-                    <div>
-                        <label for="mail">Correo electrónico</label>
-                        <input type="text" name="mail" id="mail" size="30" required="True">
-                    </div>
 
-                    <div class="input-group">
-                        <label for="contrasena">Contraseña</label>
-                        <div class="password-input">
-                            <input type="password" name="contrasena" size="30" required="True">
-                            <span class="password-toggle-register" onclick="togglePassword()"><i class="fa fa-eye" aria-hidden="true"></i></span>
-                        </div>
-                    </div>    
+            <h2>Por favor, complete los campos</h2>
 
-                    <div class="input-group">
-                        <label for="repeatpw">Repetir contraseña</label>
-                        <div class="password-input">
+            <form action="./login.html" class="form-register">
+
+                <div>
+                    <label for="name">Nombre y apellido</label>
+                    <input type="text" name="name" id="name" size="30" required="True">
+                </div>
+
+                <div>
+                    <label for="mail">Correo electrónico</label>
+                    <input type="text" name="mail" id="mail" size="30" required="True">
+                </div>
+
+                <div class="input-group">
+                    <label for="contrasena">Contraseña</label>
+                    <div class="password-input">
+                        <input type="password" name="contrasena" size="30" required="True">
+                        <span class="password-toggle-register" onclick="togglePassword()"><i class="fa fa-eye"
+                                aria-hidden="true"></i></span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="repeatpw">Repetir contraseña</label>
+                    <div class="password-input">
                         <input type="text" name="repeatpw" id="repeatpw" size="30" required="True">
-                        <span class="password-toggle-register" onclick="togglePassword()"><i class="fa fa-eye" aria-hidden="true"></i></span>
-                        </div>
+                        <span class="password-toggle-register" onclick="togglePassword()"><i class="fa fa-eye"
+                                aria-hidden="true"></i></span>
                     </div>
+                </div>
 
-                    <div>
-                        <label for="datepicker">Fecha de nacimiento</label>
-                        <input type="text" id="datepicker" name="datepicker">
-                    </div>
+                <div>
+                    <label for="datepicker">Fecha de nacimiento</label>
+                    <input type="text" id="datepicker" name="datepicker">
+                </div>
 
-                    <div>
-                        <label for="country">País</label>
-                        <select name="country" id="country">
-                            <option value="">--Seleccione</option>
-                            <option value="AR">Argentina</option>
-                            <option value="BO">Bolivia</option>
-                            <option value="BR">Brasil</option>
-                    </div>
-                        </select>
-                    
+                <div>
+                    <label for="country">País</label>
+                    <select name="country" id="country">
+                        <option value="">--Seleccione</option>
+                        <option value="AR">Argentina</option>
+                        <option value="BO">Bolivia</option>
+                        <option value="BR">Brasil</option>
+                </div>
+                </select>
 
-                        <div class="accept-terms">
-                            <input type="checkbox" id="terms" name="terms">
-                            <label for="terms">Acepto los <a href="./index.html">términos y condiciones</a></label>
-                        </div>
-                    </div>
-                       
-                    <div>
-                        <input type="submit" value="Darme de alta">
-                    </div>
-                        
-                </form>
-            </div>
+
+                <div class="accept-terms">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms">Acepto los <a href="./index.html">términos y condiciones</a></label>
+                </div>
+        </div>
+
+        <div>
+            <input type="submit" value="Darme de alta">
+        </div>
+
+        </form>
+        </div>
     </main>
     <footer>
         <span class="footer-text">ASOCIACIÓN MUTUAL CLINICA CAC inscripta en el Registro Nacional de Entidades de
             Medicina Prepaga (R.N.E.M.P.) bajo el número 1137. Superintendencia de Servicios de Salud - Órgano de
             Control de Obras Sociales y Entidades de Medicina Prepaga - 0800-222-SALUD (72583) -
             www.sssalud.gob.ar</span>
-            <ul class="footer-social-media-list">
-                <li><a href="https://www.youtube.com" target="" class="social-media-icon">
+        <ul class="footer-social-media-list">
+            <li><a href="https://www.youtube.com" target="" class="social-media-icon">
                     <i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-                </li>
-                
-                <li><a href="https://www.linkedin.com" target="" class="social-media-icon">
+            </li>
+
+            <li><a href="https://www.linkedin.com" target="" class="social-media-icon">
                     <i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                </li>
-                
-                <li><a href="https://twitter.com/" target="" class="social-media-icon">
+            </li>
+
+            <li><a href="https://twitter.com/" target="" class="social-media-icon">
                     <i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
-                
-                <li><a href="https://www.instagram.com" target="" class="social-media-icon">
+            </li>
+
+            <li><a href="https://www.instagram.com" target="" class="social-media-icon">
                     <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </li>
-                
-            </ul>
-        </footer>
-    </body>
+            </li>
+
+        </ul>
+    </footer>
+</body>
+
 </html>
