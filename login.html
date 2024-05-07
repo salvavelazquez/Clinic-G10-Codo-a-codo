@@ -9,37 +9,34 @@
 </head>
 <body>
     <header>
-        <nav>
-            <div id="logo">
-                <a href="./index.html">
-                    <img class="logo" src="./img/logo1.png" alt="logo">
-                </a>
-            </div>
-            <ul id="nav-links">
-                <li><a href="./contact.html" class="contact-link">Contacto</a></li>
-                <li><a href="./register.html" class="create">Date de alta</a></li>
-                <li><a href="./login.html" class="login">Inicia sesión</a></li>
-            </ul>
-        </nav>
+        <div id="login-header">
+            <img src="./img/logo1.png" alt="Header">
+        </div>
     </header>
     <main>
         <section>
+            <h2>Inicia sesión</h2>
             <form action="./index.html">
-                <div>
+                <div class="input-group">
                     <label for="nombre">Correo electrónico</label>
                     <input type="text" name="nombre" size="30" required="True">
                 </div>
 
-                <div>
+                <div class="input-group">
                     <label for="contrasena">Contraseña</label>
-                    <input type="text" name="contrasena" size="30" required="True">
+                    <div class="password-input">
+                        <input type="password" name="contrasena" size="30" required="True">
+                        <span class="password-toggle" onclick="togglePassword()"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                    </div>
                 </div>
                     
                 <div>
-                    <input type="submit" value="Iniciar sesión">
+                    <input type="submit" value="Iniciar sesión" class="submit-button">
                 </div>
                 
             </form>
+            <p class="login-options">¿No se ha dado de alta? <a href="./register.html">Regístrese</a></p>
+            <p class="login-options">¿Ha olvidado su contraseña? <a href="./forgot_password.html">Recuperar contraseña</a></p>
         </section>
     </main>
     <footer>
@@ -66,5 +63,18 @@
                 
             </ul>
         </footer>
+    <script>
+        function togglePassword() {
+            var passwordInput = document.querySelector('input[name="contrasena"]');
+            var passwordToggle = document.querySelector('.password-toggle');
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                passwordToggle.innerHTML = '<i class="fa fa-eye-slash" aria-hidden="true"></i>';
+            } else {
+                passwordInput.type = "password";
+                passwordToggle.innerHTML = '<i class="fa fa-eye" aria-hidden="true"></i>';
+            }
+        }
+    </script>
 </body>
 </html>
