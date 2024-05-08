@@ -600,9 +600,9 @@ footer {
 
 .register-container {
     background-color: rgba(151, 253, 193, 0.247); 
-    padding: 20px; 
-    border-radius: 8px; 
-    max-width: 400px; 
+    padding: 30px; 
+    border-radius: 16px; 
+    max-width: 500px; 
     margin: 0 auto; 
 }
 
@@ -618,7 +618,9 @@ footer {
 .form-register select,
 .form-register input[type="text"],
 .form-register input[type="email"],
-.form-register textarea {
+.form-register textarea,
+.form-register input[type="password"],
+#datepicker {
     width: calc(100% - 16px); 
     padding: 0.5em;
     border: solid 1px #627EDC;
@@ -732,6 +734,32 @@ footer {
 .ui-datepicker td.ui-datepicker-highlight a {
     background-color: #ffcc00; 
 }
+
+.form-actions {
+    text-align: center; 
+}
+
+#btn-send {
+    width: 25%;
+    margin-top: 15px;
+    padding: 0.8em;
+    background: #375171;
+    border: 0;
+    color: #e4e4e4;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#btn-send:hover,
+#btn-send:focus {
+    background: #3a669c;
+    color: #ffffff;
+    outline: 0;
+}
+
 /* ----------------- */
 /* LOGIN */
 /* ----------------- */
@@ -942,4 +970,13 @@ section form input[type="password"] {
     #login-header img {
         max-width: 300px;
     }
+}
+
+/*-------------------*/
+/*---JS---*/
+/*-------------------*/
+
+.validation-message {
+    color: blue;
+    font-style: italic;
 }
