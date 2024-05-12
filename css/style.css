@@ -522,6 +522,24 @@ footer {
 
 /* 768px en adelante */
 @media only screen and (max-width:768px){
+    .create {
+        margin-left: 5px;
+        margin-right: 8px;
+        padding: 12px 15px;
+    }
+    
+    .login {
+        padding: 12px 15px;
+    }
+    
+    .contact-link{
+        display: none;
+    }
+
+    .section1 h1{
+        font-size: 50px;
+    }
+
     article {
         margin: 0px;
         flex-wrap: wrap;
