@@ -235,6 +235,16 @@ article p {
     margin-top: 20px;
 }
 
+iframe {
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+iframe:hover {
+    transform: scale(1.1);
+}
+
+
 footer {
     width: 100%;
     height: auto;
@@ -512,6 +522,24 @@ footer {
 
 /* 768px en adelante */
 @media only screen and (max-width:768px){
+    .create {
+        margin-left: 5px;
+        margin-right: 8px;
+        padding: 12px 15px;
+    }
+    
+    .login {
+        padding: 12px 15px;
+    }
+    
+    .contact-link{
+        display: none;
+    }
+
+    .section1 h1{
+        font-size: 50px;
+    }
+
     article {
         margin: 0px;
         flex-wrap: wrap;
@@ -600,9 +628,9 @@ footer {
 
 .register-container {
     background-color: rgba(151, 253, 193, 0.247); 
-    padding: 20px; 
-    border-radius: 8px; 
-    max-width: 400px; 
+    padding: 30px; 
+    border-radius: 16px; 
+    max-width: 500px; 
     margin: 0 auto; 
 }
 
@@ -618,7 +646,9 @@ footer {
 .form-register select,
 .form-register input[type="text"],
 .form-register input[type="email"],
-.form-register textarea {
+.form-register textarea,
+.form-register input[type="password"],
+#datepicker {
     width: calc(100% - 16px); 
     padding: 0.5em;
     border: solid 1px #627EDC;
@@ -732,6 +762,32 @@ footer {
 .ui-datepicker td.ui-datepicker-highlight a {
     background-color: #ffcc00; 
 }
+
+.form-actions {
+    text-align: center; 
+}
+
+#btn-send {
+    width: 25%;
+    margin-top: 15px;
+    padding: 0.8em;
+    background: #375171;
+    border: 0;
+    color: #e4e4e4;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#btn-send:hover,
+#btn-send:focus {
+    background: #3a669c;
+    color: #ffffff;
+    outline: 0;
+}
+
 /* ----------------- */
 /* LOGIN */
 /* ----------------- */
@@ -849,4 +905,106 @@ section form input[type="password"] {
 
 .submit-button:hover {
     background-color: #1e3a5e; 
+  }  
+
+/*-------------------*/
+/*---MEDIA QUERIES register & login---*/
+/*-------------------*/
+
+/* Media Query para pantallas entre 467px y 768px */
+@media only screen and (min-width: 467px) and (max-width: 768px) {
+    .register-container {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .form-register input[type="text"],
+    .form-register input[type="password"],
+    .form-register input[type="email"],
+    .form-register input[type="submit"],
+    .form-register select {
+        width: 100%;
+    }
+
+    .password-toggle-register {
+        left: calc(100% - 35px);
+    }
+}
+
+/* Media Query para pantallas de 768px en adelante */
+@media only screen and (min-width: 768px) {
+    .register-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .form-register input[type="text"],
+    .form-register input[type="password"],
+    .form-register input[type="email"],
+    .form-register input[type="submit"],
+    .form-register select {
+        width: calc(100% - 16px);
+    }
+
+    .password-toggle-register {
+        left: calc(100% - 51px);
+    }
+}
+
+/* Media Query para pantallas grandes a partir de 2000px */
+@media only screen and (min-width: 2000px) {
+    .register-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .form-register input[type="text"],
+    .form-register input[type="password"],
+    .form-register input[type="email"],
+    .form-register input[type="submit"],
+    .form-register select {
+        width: calc(100% - 32px);
+    }
+
+    .password-toggle-register {
+        left: calc(100% - 67px);
+    }
+}
+
+/* Media Query para pantallas entre 467px y 768px */
+@media only screen and (min-width: 467px) and (max-width: 768px) {
+    #login-header img {
+        max-width: 150px;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}
+
+/* Media Query para pantallas de 768px en adelante */
+@media only screen and (min-width: 768px) {
+    #login-header img {
+        max-width: 200px;
+    }
+
+    .submit-button {
+        width: auto;
+    }
+}
+
+/* Media Query para pantallas grandes a partir de 2000px */
+@media only screen and (min-width: 2000px) {
+    #login-header img {
+        max-width: 300px;
+    }
+}
+
+/*-------------------*/
+/*---JS---*/
+/*-------------------*/
+
+.validation-message {
+    color: blue;
+    font-style: italic;
 }
