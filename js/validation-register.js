@@ -65,24 +65,13 @@ const validarFormulario = (event) => {
     }
 
     if (validation) {
-        // Envía el formulario utilizando AJAX
-        const formData = new FormData(formRegister);
-        fetch(formRegister.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            // Maneja la respuesta si es necesario
-        })
-        .catch(error => {
-            // Maneja el error si ocurre
-        });
+        formRegister.submit();
     } else {
         return false;
     }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const passwordInput = document.getElementById("password");
     const repeatPasswordInput = document.getElementById("repeatpw");
     const togglePassword = document.getElementById("togglePassword");
@@ -98,16 +87,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    togglePassword.addEventListener("click", function() {
+    togglePassword.addEventListener("click", function () {
         togglePasswordVisibility(passwordInput, this);
     });
 
-    toggleRepeatPassword.addEventListener("click", function() {
+    toggleRepeatPassword.addEventListener("click", function () {
         togglePasswordVisibility(repeatPasswordInput, this);
     });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
     $("#datepicker").datepicker();
 });
 
